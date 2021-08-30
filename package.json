@@ -1,12 +1,22 @@
 {
   "name": "colornpm",
-  "version": "0.1.0",
-  "private": true,
+  "description": "A vue component release test",
+  "version": "1.2.0",
+  "author": "yhsu",
+  "main":"dist/colornpm.common.js",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --target lib --name colornpm ./src/index.js",
+    "lint": "vue-cli-service lint",
+    "build:doc":"vue-cli-service build ./src/main.js --dest docs --mode development",
+    "test:unit":"vue-cli-service test:unit"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0"

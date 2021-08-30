@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <outerblk/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import outerblk from './components/outerblk.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    outerblk
   }
 }
 </script>
