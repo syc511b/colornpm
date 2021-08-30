@@ -3,14 +3,16 @@
   "description": "A vue component release test",
   "version": "1.2.0",
   "author": "yhsu",
-  "main":"dist/colornpm.common.js",
+  "main": "dist/colornpm.common.js",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name colornpm ./src/index.js",
     "lint": "vue-cli-service lint",
-    "build:doc":"vue-cli-service build ./src/main.js --dest docs --mode development",
-    "test:unit":"vue-cli-service test:unit"
+    "build:doc": "vue-cli-service build ./src/main.js --dest docs --mode development",
+    "test:unit": "vue-cli-service test:unit",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "files": [
     "dist/*",
@@ -22,13 +24,20 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/vue3": "^6.3.7",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "vue-loader": "^16.5.0"
   },
   "eslintConfig": {
     "root": true,
